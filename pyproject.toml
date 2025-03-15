@@ -3,5 +3,23 @@ name = "jupyter"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.11, <3.12"
+dependencies = [
+    "intel-extension-for-pytorch==2.6.10+xpu",
+    "ipython>=9.0.2",
+    "jupyterlab>=4.3.6",
+    "matplotlib>=3.10.1",
+    "minio>=7.2.15",
+    "oneccl-bind-pt==2.6.0+xpu",
+    "setuptools>=76.0.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "ultralytics>=8.3.91",
+]
+
+[[tool.uv.index]]
+url = "https://pytorch-extension.intel.com/release-whl/stable/xpu/us/"
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/xpu"
+
